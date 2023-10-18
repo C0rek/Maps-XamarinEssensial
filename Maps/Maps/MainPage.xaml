@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maps.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Label" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="Entry" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="Gray"/>
+                <Setter Property="Opacity" Value="0.7"/>
+                <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Orange"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="0,20,0,0" 
+                 Padding="20"
+                 BackgroundColor="LightBlue">
+        <Label Text="Latitude:" 
+               Style="{StaticResource Label}"
+               />
+        <Entry x:Name="Latitudetxt" 
+               Placeholder="x : " 
+               Style="{StaticResource Entry}"
+               />
+        <Label Text="Longitude:"
+               Style="{StaticResource Label}"
+               />
+        <Entry x:Name="Longitudetxt" 
+               Placeholder="y : " 
+               Style="{StaticResource Entry}"
+               />
+        <Button x:Name="Maps" 
+                Text="Search on the map"
+                Style="{StaticResource Button}"
+                Clicked="Maps_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
